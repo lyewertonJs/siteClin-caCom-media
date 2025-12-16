@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: aqua;
+
+  .top {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    figure {
+      img {
+        width: 10rem;
+      }
+    }
+    hr {
+      display: none;
+    }
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+
+        font-size: 18px;
+        font-weight: 700;
+
+        a {
+          text-decoration: none;
+          color: white;
+          text-shadow: 1px 1px 1px black;
+        }
+
+        a:hover {
+          background-color: rgba(255, 255, 255, 0.954);
+          color: black;
+          text-shadow: 1px 1px 10px white;
+
+          padding: 5px 10px;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+main {
+  width: calc(100% - 40px);
+
+  .especialidades {
+    max-width: 1024px;
+    margin: 2rem auto;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      list-style: none;
+
+      font-size: 18px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  .default {
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    color: gray;
+  }
+  .tabela {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem;
+
+    figure {
+      img {
+        flex: 1 1 auto;
+        width: 100%;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 20px;
+    }
+    th {
+      background-color: aqua;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: rgba(212, 212, 212, 0.342);
+    }
+    tbody tr:nth-of-type(odd) {
+      background-color: rgba(145, 145, 145, 0.342);
+    }
+  }
+}
+footer {
+  background-color: rgb(12, 151, 128);
+
+  text-align: center;
+  color: white;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 470px) {
+  header {
+    width: 100%;
+
+    .top {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      figure {
+        margin: 0 auto;
+      }
+      .line {
+        display: block;
+        flex: 1 1 auto;
+        width: 90%;
+        background-color: black;
+        height: 1px;
+      }
+      nav {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .tabela {
+    figure {
+      display: none;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .tabela {
+    flex-wrap: wrap;
+  }
+}
